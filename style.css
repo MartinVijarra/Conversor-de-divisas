@@ -93,10 +93,20 @@ select{
     display: inline;
     cursor: pointer;
     float: right;
+    transition: 0.5s;
+}
+
+.boton-borrar:hover{
+    background: rgb(184, 66, 66);
+    color: #fff;
 }
 
 li{
     list-style: none;
+    padding: 8px;
+    background-color: rgb(236, 236, 236);
+    margin: 8px 0;
+    border-radius: 5px;
 }
 
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
