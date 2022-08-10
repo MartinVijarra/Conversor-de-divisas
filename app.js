@@ -37,14 +37,11 @@ const botonClick = () => { //MOSTRAR CONTENIDO EN EL DOM
   const agregarEnLista = ul
 
   li.innerHTML += `La conversión de <b>$${primerValor.value} ${primerDivisa.value}</b> es igual a: <b>$${segundoValor.value} ${segundaDivisa.value}</b>`
-  objeto = new Moneda(primerDivisa.value, primerValor.value, segundoValor.value)
   
   agregarEnLista.appendChild(li)
   li.appendChild(borrarResultados())
 
-  almacenarEnLocal.push(li.innerHTML)
   almacenarResultados()
-  imprimirStorage()
 }
 
 //EVENTOS
@@ -65,18 +62,6 @@ calcular()
 function almacenarResultados() {   
   let resultados = JSON.stringify(almacenarEnLocal)
   localStorage.setItem("Conversiones", resultados) // <= ARREGLO ALMACENADO EN EL LOCALSTORAGE
-
-}
-
-function imprimirStorage() {
-  const mostrarLista = localStorage.getItem("Conversiones")
-
-  if (mostrarLista == null) {
-    almacenarEnLocal = []
-  } else {
-    almacenarEnLocal = JSON.parse(mostrarLista)
-  }
-  return almacenarEnLocal
 }
 
 //ELIMINAR CONTENIDO DEL DOM

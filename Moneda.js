@@ -6,3 +6,4 @@ class Moneda {  //OBJETO MONEDA
     }
 }
 
+//objeto = new Moneda(primerDivisa.value, primerValor.value, segundoValor.value)
