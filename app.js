@@ -31,17 +31,20 @@ function calcular() {
   })
 }
 
-const botonClick = () => { //MOSTRAR CONTENIDO EN EL DOM
+function botonClick() { //MOSTRAR CONTENIDO EN EL DOM
   const li = document.createElement('li')
   li.classList = 'lista'
   const agregarEnLista = ul
 
   li.innerHTML += `La conversión de <b>$${primerValor.value} ${primerDivisa.value}</b> es igual a: <b>$${segundoValor.value} ${segundaDivisa.value}</b>`
-  
+
   agregarEnLista.appendChild(li)
   li.appendChild(borrarResultados())
+  almacenarEnLocal.push(li.innerHTML)
 
-  almacenarResultados()
+  //AGREGAR CONTENIDO AL LOCALSTORAGE
+  let resultados = JSON.stringify(almacenarEnLocal)
+  localStorage.setItem("Conversiones", resultados) // <= ARREGLO ALMACENADO EN EL LOCALSTORAGE
 }
 
 //EVENTOS
@@ -58,14 +61,21 @@ taza.addEventListener('click', () =>{ //BOTON PARA INVERTIR LAS DIVISAS
 
 calcular()
 
-//AGREGAR CONTENIDO AL LOCALSTORAGE
-function almacenarResultados() {   
-  let resultados = JSON.stringify(almacenarEnLocal)
-  localStorage.setItem("Conversiones", resultados) // <= ARREGLO ALMACENADO EN EL LOCALSTORAGE
-}
+document.addEventListener('DOMContentLoaded', function() { //RECUPERAR DATOS DEL LOCALSTORAGE
+  const obtenerLista = JSON.parse(localStorage.getItem("Conversiones"))
 
-//ELIMINAR CONTENIDO DEL DOM
-function borrarResultados() { 
+  obtenerLista.forEach( function(elementoLista) {
+    botonClick(elementoLista)
+    console.log(obtenerLista);
+  })
+  
+  // obtenerLista.forEach( function(elementoLista) {
+  //   botonClick(elementoLista)
+  //   console.log(obtenerLista);
+  // })
+})
+
+function borrarResultados() { //ELIMINAR CONTENIDO DEL DOM
   const botonBorrar = document.createElement('button')
 
   botonBorrar.textContent = 'X'
