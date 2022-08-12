@@ -36,17 +36,21 @@ function botonClick() { //MOSTRAR CONTENIDO EN EL DOM
   li.classList = 'lista'
   const agregarEnLista = ul
 
-  li.innerHTML += `La conversión de <b>$${primerValor.value} ${primerDivisa.value}</b> es igual a: <b>$${segundoValor.value} ${segundaDivisa.value}</b>`
+  li.innerHTML = `La conversión de <b>$${primerValor.value} ${primerDivisa.value}</b> es igual a: <b>$${segundoValor.value} ${segundaDivisa.value}</b>`
 
   agregarEnLista.appendChild(li)
   li.appendChild(borrarResultados())
   almacenarEnLocal.push(li.innerHTML)
 
-  //AGREGAR CONTENIDO AL LOCALSTORAGE
+  almacenarResultados()
+}
+
+//AGREGAR CONTENIDO AL LOCALSTORAGE
+function almacenarResultados() {
   let resultados = JSON.stringify(almacenarEnLocal)
   localStorage.setItem("Conversiones", resultados) // <= ARREGLO ALMACENADO EN EL LOCALSTORAGE
 }
-
+  
 //EVENTOS
 primerDivisa.addEventListener('change', calcular)
 segundaDivisa.addEventListener('change', calcular)
@@ -66,13 +70,8 @@ document.addEventListener('DOMContentLoaded', function() { //RECUPERAR DATOS DEL
 
   obtenerLista.forEach( function(elementoLista) {
     botonClick(elementoLista)
-    console.log(obtenerLista);
+    console.log(elementoLista);
   })
-  
-  // obtenerLista.forEach( function(elementoLista) {
-  //   botonClick(elementoLista)
-  //   console.log(obtenerLista);
-  // })
 })
 
 function borrarResultados() { //ELIMINAR CONTENIDO DEL DOM
@@ -85,6 +84,7 @@ function borrarResultados() { //ELIMINAR CONTENIDO DEL DOM
     const item = e.target.parentElement
     const borrarDeLista = ul
     borrarDeLista.removeChild(item)
+    botonClick()
 
     Toastify({
       text: 'Conversion eliminada',
