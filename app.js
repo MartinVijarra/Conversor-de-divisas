@@ -40,23 +40,16 @@ function botonClick() { //MOSTRAR CONTENIDO EN EL DOM
 
   agregarEnLista.appendChild(li)
   li.appendChild(borrarResultados())
-  almacenarEnLocal.push(JSON.stringify(li.innerHTML))
+  almacenarEnLocal.push(li.innerHTML)
 
-  almacenarEnStorage()
+  localStorage.setItem("Conversiones", JSON.stringify(almacenarEnLocal)) // <= ARREGLO ALMACENADO EN EL LOCALSTORAGE
+  const obtenerLista = JSON.parse(localStorage.getItem("Conversiones"))
 }
 
-  //AGREGAR CONTENIDO AL LOCALSTORAGE
-function almacenarEnStorage() {
-    const guardarLista = localStorage.setItem("Conversiones", almacenarEnLocal) // <= ARREGLO ALMACENADO EN EL LOCALSTORAGE
-    const obtenerLista = JSON.parse(localStorage.getItem("Conversiones"))
 
-    document.addEventListener('DOMContentLoaded', () => { //RECUPERAR DATOS DEL LOCALSTORAGE
-      obtenerLista.forEach( function(elementoLista) {
-        botonClick(elementoLista)
-        console.log(elementoLista);
-      })
-    })
-}
+document.addEventListener('DOMContentLoaded', () => { //RECUPERAR DATOS DEL LOCALSTORAGE
+  botonClick()
+})
   
 //EVENTOS
 primerDivisa.addEventListener('change', calcular)
