@@ -44,16 +44,6 @@ function botonClick() { //MOSTRAR CONTENIDO EN EL DOM
 
   localStorage.setItem("Conversiones", JSON.stringify(almacenarEnLocal)) // <= ARREGLO ALMACENADO EN EL LOCALSTORAGE
 }
-
-document.addEventListener('DOMContentLoaded', () => { 
-  const obtenerLista = JSON.parse(localStorage.getItem("Conversiones"))
-
-  document.addEventListener('DOMContentLoaded', () => { //RECUPERAR DATOS DEL LOCALSTORAGE
-    obtenerLista.forEach( function(elementoLista) {
-      botonClick(elementoLista)
-    })
-  })
-})
   
 //EVENTOS
 primerDivisa.addEventListener('change', calcular)
