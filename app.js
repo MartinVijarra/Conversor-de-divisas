@@ -20,7 +20,7 @@ function calcular() {
   const primerMonedaIngresada = primerDivisa.value 
   const segundaMonedaIngresada = segundaDivisa.value
 
-  fetch(`https://v6.exchangerate-api.com/v6/58f679169d6ab2828a7dcda0/latest/${primerMonedaIngresada}`)
+  fetch(`https://v6.exchangerate-api.com/v6/fdfed9627fc6aea8f26fec7e/latest/${primerMonedaIngresada}`)
   .then(res => res.json())
   .then(data => {
     const taza = data.conversion_rates[segundaMonedaIngresada]
