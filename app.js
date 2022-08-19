@@ -11,8 +11,6 @@ const botonDeCambio = document.getElementById('taza')
 const ul = document.querySelector('.lista-resultados')
 
 //Resultados almacenados
-let operacion = ''
-let objeto = ''
 let almacenarEnLocal = [] // <= ARREGLO QUE IRA AL LOCALSTORAGE
 let divisa = document.querySelector('.divisa')
 
