@@ -80,7 +80,6 @@
 @media (min-width: 280px) and (max-width: 819px){
     .container{
         margin-top: 0;
-
     }
 
     h1{
@@ -149,7 +148,7 @@
 
     .lista{
         height: 60px;
-        font-size: 15px;
+        font-size: 14px;
         padding: 10px;
         display: flex;
         align-items: center;
@@ -163,7 +162,7 @@
     }
 
     b{
-        font-size: 15px;
+        font-size: 12px;
         padding: 4px;
     }
 
