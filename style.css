@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(236, 236, 236);
+}
+
+.container{
+    width: 100%;
+    margin-top: 35px;
+}
+
+.conversor{
+    max-width: 680px;
+    margin: auto;
+    text-align: center;
+    background: #fff;
+    padding: 40px 60px;
+    border-radius: 5px;
+}
+
+.ingresarCantidad{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+select{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.taza-cambio-container{
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+    background: rgb(236, 236, 236);
+    border-radius: 5px;
+}
+
+#taza{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(to right, #00b09b, #96c93d);
+    color: #fff;
+    cursor: pointer;
+}
+
+#taza:active{
+    background: linear-gradient(to right, #96c93d, #00b09b);
+}
+
+#convertir{
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+#convertir:active{
+    background-color: rgb(36, 36, 36);
+}
+
+.moneda{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 8px;
+}
+
+.resultado{
+    max-width: 680px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 40px 40px;
+    border-radius: 5px;
+}
+
+.boton-borrar{
+    padding: 1px 5px;
+    border-radius: 3px;
+    border: none;
+    background: transparent;
+    color: rgb(184, 66, 66);
+    font-weight: 600;
+    display: inline;
+    cursor: pointer;
+    float: right;
+    transition: 0.5s;
+}
+
+.boton-borrar:hover{
+    background: rgb(184, 66, 66);
+    color: #fff;
+}
+
+li{
+    list-style: none;
+    padding: 8px;
+    background-color: rgb(236, 236, 236);
+    margin: 8px 0;
+    border-radius: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

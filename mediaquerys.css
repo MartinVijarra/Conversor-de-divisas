@@ -1,0 +1,170 @@
+@media (min-width: 820px) and (max-width: 1200px){
+    .container{
+        margin-top: 40px;
+    }
+
+    .conversor{
+        max-width: 90%;
+        height: 650px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px 0;
+        padding: 20px;
+    }
+
+    .taza-cambio-container{
+        margin: 0;
+        height: 100px;
+    }
+
+    .ingresarCantidad{
+        width: 100%;
+        height: 80px;
+        font-size: 40px;
+        margin: 0;
+    }
+
+    #taza{
+       height: 70px;
+       font-size: 25px; 
+    }
+
+    #informacion-de-cambio{
+        font-size: 30px;
+    }
+
+    #convertir{
+        height: 80px;
+        font-size: 40px;
+    }
+
+    #primer-divisa, #segunda-divisa{
+        height: 80px;
+        font-size: 30px;
+    }
+
+    #convertir{
+        margin: 0;
+    }
+
+    h3{
+        font-size: 40px;
+    }
+
+    .resultado{
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .lista{
+        height: 90px;
+        font-size: 27px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .boton-borrar{
+        font-size: 30px;
+        padding: 0;
+        margin: auto;
+    }
+
+    b{
+        font-size: 25px;
+        padding: 0 8px;
+    }
+
+}
+
+@media (min-width: 280px) and (max-width: 819px){
+    .container{
+        margin-top: 0;
+
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    .conversor{
+        max-width: 100%;
+        height: 470px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+        padding: 15px;
+    }
+
+    .taza-cambio-container{
+        margin: 0;
+        height: 60px;
+    }
+
+    .ingresarCantidad{
+        width: 100%;
+        height: 50px;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .moneda{
+        height: 60px;
+    }
+
+    #taza{
+        height: 50px;
+       font-size: 16px;
+       width: 120px;
+    }
+
+    #informacion-de-cambio{
+        font-size: 20px;
+    }
+
+    #convertir{
+        height: 50px;
+        font-size: 20px;
+    }
+
+    #primer-divisa, #segunda-divisa{
+        height: 50px;
+        font-size: 20px;
+    }
+
+    #convertir{
+        margin: 0;
+    }
+
+    h3{
+        font-size: 30px;
+    }
+
+    .resultado{
+        max-width: 100%;
+        padding: 10px;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .lista{
+        height: 60px;
+        font-size: 15px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boton-borrar{
+        font-size: 15px;
+        padding: 0;
+        margin: auto;
+    }
+
+    b{
+        font-size: 15px;
+        padding: 4px;
+    }
+
+}
